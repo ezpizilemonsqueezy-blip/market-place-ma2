@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "databaseConnected": true,
+    "emailTransport": "mailtrap",
+    "databaseUri": "mongodb://127.0.0.1:47738/marketplace-auth-tests"
+  },
+  "tests": {
+    "unauthenticatedGetAll": {
+      "status": 401,
+      "message": "You are not logged in. Please log in to get access."
+    },
+    "authenticatedGetAll": {
+      "status": 200,
+      "resultCount": 70
+    },
+    "invalidToken": {
+      "status": 401,
+      "message": "Invalid token."
+    },
+    "expiredToken": {
+      "status": 401,
+      "message": "Your token has expired."
+    },
+    "deletedUserToken": {
+      "status": 401,
+      "message": "The user that owns this token no longer exists."
+    },
+    "expiredPassword": {
+      "status": 401,
+      "message": "Your password has expired. Please reset or update your password."
+    },
+    "deleteAuthorization": {
+      "normalUser": {
+        "status": 403,
+        "message": "You do not have permission to perform this action."
+      },
+      "adminUser": {
+        "status": 204
+      }
+    },
+    "forgotPassword": {
+      "forgotResponse": {
+        "status": 200,
+        "message": "Token sent to email."
+      },
+      "resetToken": "107760fe856ac9e561654396a7167b46bebe1c9878ba140d7156cf6c1b5e3705",
+      "emailSubject": "Your password reset token (valid for 10 min)",
+      "emailMessage": "Forgot your password? Submit a PATCH request with your new password and passwordConfirm to: http://127.0.0.1:47759/api/v1/users/resetPassword/107760fe856ac9e561654396a7167b46bebe1c9878ba140d7156cf6c1b5e3705\nIf you did not forget your password, please ignore this email.",
+      "resetResponse": {
+        "status": 200
+      }
+    },
+    "updateMyPassword": {
+      "updateResponse": {
+        "status": 200
+      },
+      "oldPasswordLoginStatus": 401,
+      "newPasswordLoginStatus": 200
+    },
+    "updateMe": {
+      "status": 200,
+      "updatedName": "Updated Session User"
+    },
+    "deleteMe": {
+      "deleteResponse": {
+        "status": 204
+      },
+      "oldTokenAfterDelete": {
+        "status": 401,
+        "message": "The user that owns this token no longer exists."
+      }
+    },
+    "cookieStorage": {
+      "status": 201,
+      "setCookie": "jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZTMyYzllYmJkMmFmNWQyNDhkYWFjOSIsImlhdCI6MTc3NjQ5NTc3NCwiZXhwIjoxNzc2NDk5Mzc0fQ.MYiHHARXgEVSg_yWypf6BxjDgShpkr-TMgmX0VCLjtU; Path=/; Expires=Sat, 25 Apr 2026 07:02:54 GMT; HttpOnly; SameSite=Lax"
+    },
+    "headers": {
+      "rateLimitHeaders": {
+        "ratelimit-limit": "100",
+        "ratelimit-remaining": "74",
+        "ratelimit-reset": "3585"
+      },
+      "helmetHeaders": {
+        "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+        "x-frame-options": "SAMEORIGIN",
+        "x-dns-prefetch-control": "off"
+      }
+    },
+    "sanitization": {
+      "status": 201,
+      "savedName": "&lt;script>alert(\"xss\")&lt;/script>Clean User"
+    },
+    "hpp": {
+      "status": 200,
+      "firstProductName": "Thermal Paste Syringe"
+    }
+  }
+}

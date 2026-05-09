@@ -1,0 +1,89 @@
+{
+  "aggregationRoutePreview": [
+    {
+      "totalProducts": 2,
+      "products": [
+        {
+          "name": "Budget USB Office Mouse",
+          "price": 450,
+          "productSlug": "BUDGET-USB-OFFICE-MOUSE",
+          "postedDate": "2026-03-15T00:00:00.000Z"
+        },
+        {
+          "name": "Portable Mouse Pad",
+          "price": 300,
+          "productSlug": "PORTABLE-MOUSE-PAD",
+          "postedDate": "2026-03-16T00:00:00.000Z"
+        }
+      ],
+      "averagePrice": 375,
+      "minimumPrice": 300,
+      "maximumPrice": 450,
+      "category": "ACCESSORIES"
+    },
+    {
+      "totalProducts": 2,
+      "products": [
+        {
+          "name": "Cleaning Brush Kit",
+          "price": 500,
+          "productSlug": "CLEANING-BRUSH-KIT",
+          "postedDate": "2026-03-20T00:00:00.000Z"
+        },
+        {
+          "name": "Thermal Paste Syringe",
+          "price": 250,
+          "productSlug": "THERMAL-PASTE-SYRINGE",
+          "postedDate": "2026-03-19T00:00:00.000Z"
+        }
+      ],
+      "averagePrice": 375,
+      "minimumPrice": 250,
+      "maximumPrice": 500,
+      "category": "MAINTENANCE"
+    },
+    {
+      "totalProducts": 2,
+      "products": [
+        {
+          "name": "USB-C Charging Cable",
+          "price": 700,
+          "productSlug": "USB-C-CHARGING-CABLE",
+          "postedDate": "2026-03-18T00:00:00.000Z"
+        },
+        {
+          "name": "HDMI Cable 2M",
+          "price": 650,
+          "productSlug": "HDMI-CABLE-2M",
+          "postedDate": "2026-03-17T00:00:00.000Z"
+        }
+      ],
+      "averagePrice": 675,
+      "minimumPrice": 650,
+      "maximumPrice": 700,
+      "category": "CABLES"
+    }
+  ],
+  "virtualPropertySample": {
+    "name": "Budget USB Office Mouse",
+    "postedDate": "2026-03-15T00:00:00.000Z",
+    "daysPosted": 13
+  },
+  "documentMiddlewareSample": {
+    "name": "Budget USB Office Mouse",
+    "productSlug": "BUDGET-USB-OFFICE-MOUSE"
+  },
+  "queryMiddlewareSample": {
+    "visibleProductCount": 19,
+    "hiddenPremiumCount": 1,
+    "premiumFindAttemptCount": 19,
+    "premiumFlagsReturned": [
+      false
+    ]
+  },
+  "aggregateMiddlewareSample": {
+    "premiumAggregateAttemptCount": 0
+  },
+  "builtInValidatorMessage": "Description must not exceed 50 characters",
+  "customValidatorMessage": "Discount price (950) should be below regular price"
+}

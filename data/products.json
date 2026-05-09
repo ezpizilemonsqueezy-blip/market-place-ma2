@@ -1,0 +1,699 @@
+[
+  {
+    "id": 1,
+    "name": "Intel Core i7-13700K CPU",
+    "price": 25000,
+    "category": "CPU",
+    "description": "High-performance gaming CPU",
+    "seller": "Ian",
+    "postedDate": "2026-03-01T00:00:00.000Z"
+  },
+  {
+    "id": 2,
+    "name": "Samsung 1TB NVMe SSD",
+    "price": 5500,
+    "category": "Storage",
+    "description": "Fast NVMe SSD for quick boot times",
+    "seller": "Lance",
+    "postedDate": "2026-03-02T00:00:00.000Z"
+  },
+  {
+    "id": 3,
+    "name": "Corsair 32GB DDR4 RAM",
+    "price": 6200,
+    "category": "Memory",
+    "description": "32GB DDR4 kit with RGB lighting",
+    "seller": "Lance",
+    "postedDate": "2026-03-03T00:00:00.000Z"
+  },
+  {
+    "id": 4,
+    "name": "NVIDIA RTX 4060 Graphics Card",
+    "price": 22000,
+    "category": "GPU",
+    "description": "Compact GPU for smooth 1440p gaming",
+    "seller": "Ian",
+    "postedDate": "2026-03-04T00:00:00.000Z"
+  },
+  {
+    "id": 5,
+    "name": "Seasonic 850W Gold PSU",
+    "price": 7800,
+    "category": "Power Supply",
+    "description": "850W modular PSU with Gold efficiency",
+    "seller": "Renso",
+    "postedDate": "2026-03-05T00:00:00.000Z"
+  },
+  {
+    "id": 6,
+    "name": "ASUS ROG Strix Motherboard",
+    "price": 18500,
+    "category": "Motherboard",
+    "description": "Gaming motherboard with PCIe 5.0",
+    "seller": "Aaron",
+    "postedDate": "2026-03-06T00:00:00.000Z"
+  },
+  {
+    "id": 7,
+    "name": "Noctua NH-D15 CPU Cooler",
+    "price": 4500,
+    "category": "Cooling",
+    "description": "Quiet dual-tower air cooler",
+    "seller": "Ude",
+    "postedDate": "2026-03-07T00:00:00.000Z"
+  },
+  {
+    "id": 8,
+    "name": "LG 27\" 4K Monitor",
+    "price": 16000,
+    "category": "Monitor",
+    "description": "27-inch 4K IPS monitor with USB-C",
+    "seller": "Lance",
+    "postedDate": "2026-03-08T00:00:00.000Z"
+  },
+  {
+    "id": 9,
+    "name": "Mechanical Gaming Keyboard - RGB",
+    "price": 3200,
+    "category": "Peripherals",
+    "description": "RGB keyboard with fast gaming switches",
+    "seller": "Ian",
+    "postedDate": "2026-03-09T00:00:00.000Z"
+  },
+  {
+    "id": 10,
+    "name": "Logitech MX Master 3S Mouse",
+    "price": 4800,
+    "category": "Peripherals",
+    "description": "Wireless mouse with precise tracking",
+    "seller": "Renso",
+    "postedDate": "2026-03-10T00:00:00.000Z"
+  },
+  {
+    "id": 11,
+    "name": "NZXT 500mm AIO Liquid Cooler",
+    "price": 6500,
+    "category": "Cooling",
+    "description": "Liquid cooler with RGB fans",
+    "seller": "Aaron",
+    "postedDate": "2026-03-11T00:00:00.000Z"
+  },
+  {
+    "id": 12,
+    "name": "Lian Li PC Lancool 305 Case",
+    "price": 3500,
+    "category": "Cases",
+    "description": "ATX case with tempered glass panel",
+    "seller": "Ude",
+    "postedDate": "2026-03-12T00:00:00.000Z"
+  },
+  {
+    "id": 13,
+    "name": "Corsair Virtuoso Headset",
+    "price": 5200,
+    "category": "Peripherals",
+    "description": "Wireless headset with surround sound",
+    "seller": "Lance",
+    "postedDate": "2026-03-13T00:00:00.000Z"
+  },
+  {
+    "id": 14,
+    "name": "NVIDIA GeForce RTX 4080 Super",
+    "price": 28000,
+    "category": "Graphics Cards",
+    "description": "High-end GPU with triple-fan cooling",
+    "seller": "Ude",
+    "postedDate": "2026-03-14T00:00:00.000Z",
+    "premiumProducts": true
+  },
+  {
+    "id": 15,
+    "name": "Budget USB Office Mouse",
+    "price": 450,
+    "category": "Accessories",
+    "description": "Simple wired mouse for office work",
+    "seller": "Ian",
+    "postedDate": "2026-03-15T00:00:00.000Z",
+    "priceDiscount": 350
+  },
+  {
+    "id": 16,
+    "name": "Portable Mouse Pad",
+    "price": 300,
+    "category": "Accessories",
+    "description": "Soft mouse pad for daily use",
+    "seller": "Lance",
+    "postedDate": "2026-03-16T00:00:00.000Z",
+    "priceDiscount": 200
+  },
+  {
+    "id": 17,
+    "name": "HDMI Cable 2M",
+    "price": 650,
+    "category": "Cables",
+    "description": "2-meter HDMI cable for displays",
+    "seller": "Aaron",
+    "postedDate": "2026-03-17T00:00:00.000Z",
+    "priceDiscount": 500
+  },
+  {
+    "id": 18,
+    "name": "USB-C Charging Cable",
+    "price": 700,
+    "category": "Cables",
+    "description": "Durable USB-C cable for charging",
+    "seller": "Ude",
+    "postedDate": "2026-03-18T00:00:00.000Z",
+    "priceDiscount": 550
+  },
+  {
+    "id": 19,
+    "name": "Thermal Paste Syringe",
+    "price": 250,
+    "category": "Maintenance",
+    "description": "Thermal paste for CPU cooling",
+    "seller": "Renso",
+    "postedDate": "2026-03-19T00:00:00.000Z",
+    "priceDiscount": 180
+  },
+  {
+    "id": 20,
+    "name": "Cleaning Brush Kit",
+    "price": 500,
+    "category": "Maintenance",
+    "description": "Brush kit for cleaning PC parts",
+    "seller": "Ian",
+    "postedDate": "2026-03-20T00:00:00.000Z",
+    "priceDiscount": 300
+  },
+  {
+    "id": 21,
+    "name": "AMD Ryzen 5 7600 Processor",
+    "price": 14500,
+    "category": "CPU",
+    "description": "Efficient 6-core desktop processor",
+    "seller": "Aaron",
+    "postedDate": "2026-03-21T00:00:00.000Z",
+    "priceDiscount": 12900
+  },
+  {
+    "id": 22,
+    "name": "Kingston 500GB NVMe SSD",
+    "price": 3200,
+    "category": "Storage",
+    "description": "Budget NVMe SSD for daily use",
+    "seller": "Renso",
+    "postedDate": "2026-03-22T00:00:00.000Z",
+    "priceDiscount": 2800
+  },
+  {
+    "id": 23,
+    "name": "Crucial 16GB DDR5 RAM Kit",
+    "price": 4100,
+    "category": "Memory",
+    "description": "Fast DDR5 memory for new builds",
+    "seller": "Lance",
+    "postedDate": "2026-03-23T00:00:00.000Z",
+    "priceDiscount": 3600
+  },
+  {
+    "id": 24,
+    "name": "Gigabyte B650M Motherboard",
+    "price": 9800,
+    "category": "Motherboard",
+    "description": "AM5 board with Wi-Fi and M.2 slots",
+    "seller": "Ian",
+    "postedDate": "2026-03-24T00:00:00.000Z",
+    "priceDiscount": 8900
+  },
+  {
+    "id": 25,
+    "name": "DeepCool AK400 Air Cooler",
+    "price": 1900,
+    "category": "Cooling",
+    "description": "Compact air cooler for gaming PCs",
+    "seller": "Ude",
+    "postedDate": "2026-03-25T00:00:00.000Z",
+    "priceDiscount": 1500
+  },
+  {
+    "id": 26,
+    "name": "WD Blue 2TB HDD",
+    "price": 2800,
+    "category": "Storage",
+    "description": "Reliable hard drive for file storage",
+    "seller": "Aaron",
+    "postedDate": "2026-03-26T00:00:00.000Z",
+    "priceDiscount": 2300
+  },
+  {
+    "id": 27,
+    "name": "TP-Link USB WiFi Adapter",
+    "price": 950,
+    "category": "Networking",
+    "description": "USB adapter for stable wireless access",
+    "seller": "Renso",
+    "postedDate": "2026-03-27T00:00:00.000Z",
+    "priceDiscount": 800
+  },
+  {
+    "id": 28,
+    "name": "Antec CX300 ARGB Case",
+    "price": 2600,
+    "category": "Cases",
+    "description": "Compact case with airflow front panel",
+    "seller": "Ian",
+    "postedDate": "2026-03-28T00:00:00.000Z",
+    "priceDiscount": 2200
+  },
+  {
+    "id": 29,
+    "name": "Dell 24-inch IPS Monitor",
+    "price": 7200,
+    "category": "Monitor",
+    "description": "1080p monitor with slim bezels",
+    "seller": "Lance",
+    "postedDate": "2026-03-29T00:00:00.000Z",
+    "priceDiscount": 6700
+  },
+  {
+    "id": 30,
+    "name": "Redragon Mechanical Keyboard",
+    "price": 2100,
+    "category": "Peripherals",
+    "description": "Mechanical keyboard with red switches",
+    "seller": "Ude",
+    "postedDate": "2026-03-30T00:00:00.000Z",
+    "priceDiscount": 1800
+  },
+  {
+    "id": 31,
+    "name": "Razer DeathAdder Essential",
+    "price": 1650,
+    "category": "Peripherals",
+    "description": "Ergonomic mouse for daily gaming",
+    "seller": "Ian",
+    "postedDate": "2026-03-31T00:00:00.000Z",
+    "priceDiscount": 1400
+  },
+  {
+    "id": 32,
+    "name": "A4Tech Webcam 1080p",
+    "price": 1350,
+    "category": "Accessories",
+    "description": "Full HD webcam for classes and calls",
+    "seller": "Aaron",
+    "postedDate": "2026-04-01T00:00:00.000Z",
+    "priceDiscount": 1100
+  },
+  {
+    "id": 33,
+    "name": "UGreen USB Hub 4-Port",
+    "price": 650,
+    "category": "Accessories",
+    "description": "Adds four USB ports to your setup",
+    "seller": "Renso",
+    "postedDate": "2026-04-02T00:00:00.000Z",
+    "priceDiscount": 500
+  },
+  {
+    "id": 34,
+    "name": "Orico SATA SSD 256GB",
+    "price": 1700,
+    "category": "Storage",
+    "description": "SATA SSD for upgrades and backups",
+    "seller": "Lance",
+    "postedDate": "2026-04-03T00:00:00.000Z",
+    "priceDiscount": 1400
+  },
+  {
+    "id": 35,
+    "name": "Cooler Master 650W PSU",
+    "price": 3600,
+    "category": "Power Supply",
+    "description": "Bronze PSU for midrange systems",
+    "seller": "Ude",
+    "postedDate": "2026-04-04T00:00:00.000Z",
+    "priceDiscount": 3200
+  },
+  {
+    "id": 36,
+    "name": "MSI GeForce RTX 3050 GPU",
+    "price": 14500,
+    "category": "GPU",
+    "description": "Entry gaming GPU with DLSS support",
+    "seller": "Ian",
+    "postedDate": "2026-04-05T00:00:00.000Z",
+    "priceDiscount": 13200
+  },
+  {
+    "id": 37,
+    "name": "Acer Nitro 27-inch Monitor",
+    "price": 11800,
+    "category": "Monitor",
+    "description": "High refresh monitor for esports",
+    "seller": "Aaron",
+    "postedDate": "2026-04-06T00:00:00.000Z",
+    "priceDiscount": 10900
+  },
+  {
+    "id": 38,
+    "name": "SteelSeries Gaming Headset",
+    "price": 2800,
+    "category": "Peripherals",
+    "description": "Stereo headset with soft earcups",
+    "seller": "Renso",
+    "postedDate": "2026-04-07T00:00:00.000Z",
+    "priceDiscount": 2400
+  },
+  {
+    "id": 39,
+    "name": "ASUS USB-BT500 Adapter",
+    "price": 780,
+    "category": "Networking",
+    "description": "Bluetooth adapter for wireless devices",
+    "seller": "Lance",
+    "postedDate": "2026-04-08T00:00:00.000Z",
+    "priceDiscount": 600
+  },
+  {
+    "id": 40,
+    "name": "Transcend Card Reader",
+    "price": 550,
+    "category": "Accessories",
+    "description": "USB card reader for SD and microSD",
+    "seller": "Ude",
+    "postedDate": "2026-04-09T00:00:00.000Z",
+    "priceDiscount": 400
+  },
+  {
+    "id": 41,
+    "name": "SanDisk Ultra 128GB Flash Drive",
+    "price": 720,
+    "category": "Storage",
+    "description": "Portable USB drive for quick transfers",
+    "seller": "Ian",
+    "postedDate": "2026-04-10T00:00:00.000Z",
+    "priceDiscount": 600
+  },
+  {
+    "id": 42,
+    "name": "Fantech RGB Mouse Pad XL",
+    "price": 480,
+    "category": "Accessories",
+    "description": "Large pad for keyboard and mouse",
+    "seller": "Aaron",
+    "postedDate": "2026-04-11T00:00:00.000Z",
+    "priceDiscount": 350
+  },
+  {
+    "id": 43,
+    "name": "NZXT Aer RGB Fan 120mm",
+    "price": 890,
+    "category": "Cooling",
+    "description": "ARGB fan for airflow and lighting",
+    "seller": "Renso",
+    "postedDate": "2026-04-12T00:00:00.000Z",
+    "priceDiscount": 700
+  },
+  {
+    "id": 44,
+    "name": "Corsair SP120 Fan Twin Pack",
+    "price": 1650,
+    "category": "Cooling",
+    "description": "Twin-pack case fans with quiet profile",
+    "seller": "Lance",
+    "postedDate": "2026-04-13T00:00:00.000Z",
+    "priceDiscount": 1400
+  },
+  {
+    "id": 45,
+    "name": "D-Link 8-Port Gigabit Switch",
+    "price": 2100,
+    "category": "Networking",
+    "description": "Small switch for wired home setups",
+    "seller": "Ude",
+    "postedDate": "2026-04-14T00:00:00.000Z",
+    "priceDiscount": 1800
+  },
+  {
+    "id": 46,
+    "name": "Logitech C270 HD Webcam",
+    "price": 1250,
+    "category": "Accessories",
+    "description": "Simple webcam with built-in mic",
+    "seller": "Ian",
+    "postedDate": "2026-04-15T00:00:00.000Z",
+    "priceDiscount": 1000
+  },
+  {
+    "id": 47,
+    "name": "ViewSonic 22-inch Monitor",
+    "price": 5400,
+    "category": "Monitor",
+    "description": "Compact monitor for office use",
+    "seller": "Aaron",
+    "postedDate": "2026-04-16T00:00:00.000Z",
+    "priceDiscount": 5000
+  },
+  {
+    "id": 48,
+    "name": "TeamGroup 1TB SATA SSD",
+    "price": 4100,
+    "category": "Storage",
+    "description": "Affordable SSD with fast boot speeds",
+    "seller": "Renso",
+    "postedDate": "2026-04-17T00:00:00.000Z",
+    "priceDiscount": 3600
+  },
+  {
+    "id": 49,
+    "name": "AMD Radeon RX 6600 GPU",
+    "price": 13200,
+    "category": "GPU",
+    "description": "1080p gaming graphics card",
+    "seller": "Lance",
+    "postedDate": "2026-04-18T00:00:00.000Z",
+    "priceDiscount": 12100
+  },
+  {
+    "id": 50,
+    "name": "Thermaltake Versa H18 Case",
+    "price": 2300,
+    "category": "Cases",
+    "description": "mATX case with mesh intake",
+    "seller": "Ude",
+    "postedDate": "2026-04-19T00:00:00.000Z",
+    "priceDiscount": 2000
+  },
+  {
+    "id": 51,
+    "name": "ASRock H610M Motherboard",
+    "price": 5200,
+    "category": "Motherboard",
+    "description": "Intel board for budget desktop builds",
+    "seller": "Ian",
+    "postedDate": "2026-04-20T00:00:00.000Z",
+    "priceDiscount": 4700
+  },
+  {
+    "id": 52,
+    "name": "Patriot 32GB DDR4 RAM Kit",
+    "price": 5300,
+    "category": "Memory",
+    "description": "32GB memory kit for multitasking",
+    "seller": "Aaron",
+    "postedDate": "2026-04-21T00:00:00.000Z",
+    "priceDiscount": 4900
+  },
+  {
+    "id": 53,
+    "name": "Intel AX200 WiFi Card",
+    "price": 1450,
+    "category": "Networking",
+    "description": "PCIe Wi-Fi card with Bluetooth",
+    "seller": "Renso",
+    "postedDate": "2026-04-22T00:00:00.000Z",
+    "priceDiscount": 1200
+  },
+  {
+    "id": 54,
+    "name": "JBL Quantum 100 Headset",
+    "price": 1950,
+    "category": "Peripherals",
+    "description": "Comfortable headset with clear audio",
+    "seller": "Lance",
+    "postedDate": "2026-04-23T00:00:00.000Z",
+    "priceDiscount": 1600
+  },
+  {
+    "id": 55,
+    "name": "Tecware Phantom Keyboard",
+    "price": 2300,
+    "category": "Peripherals",
+    "description": "Hot-swappable keyboard for gaming",
+    "seller": "Ude",
+    "postedDate": "2026-04-24T00:00:00.000Z",
+    "priceDiscount": 2000
+  },
+  {
+    "id": 56,
+    "name": "HyperX Pulsefire Haste Mouse",
+    "price": 1750,
+    "category": "Peripherals",
+    "description": "Lightweight gaming mouse with RGB",
+    "seller": "Ian",
+    "postedDate": "2026-04-25T00:00:00.000Z",
+    "priceDiscount": 1500
+  },
+  {
+    "id": 57,
+    "name": "Crucial BX500 480GB SSD",
+    "price": 2500,
+    "category": "Storage",
+    "description": "SATA SSD for faster app loading",
+    "seller": "Aaron",
+    "postedDate": "2026-04-26T00:00:00.000Z",
+    "priceDiscount": 2100
+  },
+  {
+    "id": 58,
+    "name": "Seagate 4TB External Drive",
+    "price": 5200,
+    "category": "Storage",
+    "description": "Portable drive for backups and media",
+    "seller": "Renso",
+    "postedDate": "2026-04-27T00:00:00.000Z",
+    "priceDiscount": 4700
+  },
+  {
+    "id": 59,
+    "name": "Arctic MX-6 Thermal Paste",
+    "price": 420,
+    "category": "Maintenance",
+    "description": "Thermal paste for CPU installations",
+    "seller": "Lance",
+    "postedDate": "2026-04-28T00:00:00.000Z",
+    "priceDiscount": 300
+  },
+  {
+    "id": 60,
+    "name": "Compressed Air Duster Can",
+    "price": 390,
+    "category": "Maintenance",
+    "description": "Air can for cleaning dusty parts",
+    "seller": "Ude",
+    "postedDate": "2026-04-29T00:00:00.000Z",
+    "priceDiscount": 280
+  },
+  {
+    "id": 61,
+    "name": "Vention DisplayPort Cable",
+    "price": 560,
+    "category": "Cables",
+    "description": "DisplayPort cable for high refresh use",
+    "seller": "Ian",
+    "postedDate": "2026-04-30T00:00:00.000Z",
+    "priceDiscount": 420
+  },
+  {
+    "id": 62,
+    "name": "Baseus USB-C to HDMI Adapter",
+    "price": 980,
+    "category": "Cables",
+    "description": "USB-C adapter for external displays",
+    "seller": "Aaron",
+    "postedDate": "2026-05-01T00:00:00.000Z",
+    "priceDiscount": 800
+  },
+  {
+    "id": 63,
+    "name": "Belkin Surge Protector 6-Socket",
+    "price": 1150,
+    "category": "Power Supply",
+    "description": "Surge protector for desk electronics",
+    "seller": "Renso",
+    "postedDate": "2026-05-02T00:00:00.000Z",
+    "priceDiscount": 900
+  },
+  {
+    "id": 64,
+    "name": "APC 650VA UPS Backup",
+    "price": 3450,
+    "category": "Power Supply",
+    "description": "Battery backup for sudden outages",
+    "seller": "Lance",
+    "postedDate": "2026-05-03T00:00:00.000Z",
+    "priceDiscount": 3000
+  },
+  {
+    "id": 65,
+    "name": "Xiaomi Desk Lamp Pro",
+    "price": 1650,
+    "category": "Accessories",
+    "description": "Adjustable lamp for late-night work",
+    "seller": "Ude",
+    "postedDate": "2026-05-04T00:00:00.000Z",
+    "priceDiscount": 1400
+  },
+  {
+    "id": 66,
+    "name": "Blue Snowball USB Microphone",
+    "price": 3200,
+    "category": "Accessories",
+    "description": "USB mic for streaming and meetings",
+    "seller": "Ian",
+    "postedDate": "2026-05-05T00:00:00.000Z",
+    "priceDiscount": 2800
+  },
+  {
+    "id": 67,
+    "name": "Edifier Stereo Speakers",
+    "price": 2600,
+    "category": "Peripherals",
+    "description": "Desktop speakers with balanced sound",
+    "seller": "Aaron",
+    "postedDate": "2026-05-06T00:00:00.000Z",
+    "priceDiscount": 2200
+  },
+  {
+    "id": 68,
+    "name": "UGreen Ethernet Cable 5M",
+    "price": 350,
+    "category": "Cables",
+    "description": "Cat6 cable for stable wired speeds",
+    "seller": "Renso",
+    "postedDate": "2026-05-07T00:00:00.000Z",
+    "priceDiscount": 250
+  },
+  {
+    "id": 69,
+    "name": "Tapo Smart Plug Mini",
+    "price": 620,
+    "category": "Accessories",
+    "description": "Smart plug for remote power control",
+    "seller": "Lance",
+    "postedDate": "2026-05-08T00:00:00.000Z",
+    "priceDiscount": 500
+  },
+  {
+    "id": 70,
+    "name": "Rapoo Wireless Keyboard Combo",
+    "price": 1850,
+    "category": "Peripherals",
+    "description": "Wireless keyboard and mouse combo",
+    "seller": "Ude",
+    "postedDate": "2026-05-09T00:00:00.000Z",
+    "priceDiscount": 1500
+  },
+  {
+    "id": 71,
+    "name": "Philips 24-inch Office Monitor",
+    "price": 6900,
+    "category": "Monitor",
+    "description": "Office monitor with eye-care mode",
+    "seller": "Ian",
+    "postedDate": "2026-05-10T00:00:00.000Z",
+    "priceDiscount": 6400
+  }
+]

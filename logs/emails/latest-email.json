@@ -1,0 +1,33 @@
+{
+  "to": "admin1776499715680@example.com",
+  "subject": "Your password reset token (valid for 10 min)",
+  "message": "Forgot your password? Submit a PATCH request with your new password and passwordConfirm to: http://localhost:3000/api/v1/users/resetPassword/7a1837dcbc941de85a74393ce3d054b504642570876f7c9de407db8e08ea32b5\nIf you did not forget your password, please ignore this email.",
+  "html": null,
+  "transport": "mailtrap",
+  "info": {
+    "accepted": [
+      "admin1776499715680@example.com"
+    ],
+    "rejected": [],
+    "ehlo": [
+      "SIZE 5242880",
+      "PIPELINING",
+      "ENHANCEDSTATUSCODES",
+      "8BITMIME",
+      "SMTPUTF8",
+      "DSN",
+      "AUTH PLAIN LOGIN CRAM-MD5"
+    ],
+    "envelopeTime": 802,
+    "messageTime": 572,
+    "messageSize": 639,
+    "response": "250 2.0.0 Ok: queued",
+    "envelope": {
+      "from": "no-reply@marketplace.local",
+      "to": [
+        "admin1776499715680@example.com"
+      ]
+    },
+    "messageId": "<51b5ce2c-9cab-a296-4660-2404d445152d@marketplace.local>"
+  }
+}

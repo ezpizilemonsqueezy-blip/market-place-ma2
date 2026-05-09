@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{%PRODUCTNAME%} - Local Marketplace</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="logo">Local Marketplace</div>
+      <ul class="nav-links">
+        <li><a href="/">🏠 Home</a></li>
+        <li><a href="/api">🔌 API</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <div class="product-detail">
+      <h1>{%PRODUCTNAME%}</h1>
+      <p><strong>💰 Price:</strong> ₱{%PRICE%}</p>
+      <p><strong>📦 Category:</strong> {%CATEGORY%}</p>
+      <p><strong>📝 Description:</strong> {%DESCRIPTION%}</p>
+      <p><strong>👤 Seller:</strong> {%SELLER%}</p>
+      <div style="margin-top: 30px; text-align: center;">
+        <a href="/item?id={%ID%}&format=json" style="display: inline-block; background: linear-gradient(45deg, #667eea, #764ba2); color: white; padding: 12px 24px; text-decoration: none; border-radius: 25px; font-weight: 500; transition: all 0.3s ease;">🔍 View API Data</a>
+      </div>
+      <a href="/overview" class="back-link">Back to Products</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Local Marketplace. Built with Node.js & Express.</p>
+  </footer>
+</body>
+</html>
