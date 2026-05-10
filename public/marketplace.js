@@ -1,7 +1,23 @@
 let currentEditId = null;
 
 document.addEventListener('DOMContentLoaded', function() {
+  const addProductButton = document.getElementById('addProductBtn');
+  const closeProductModalButton = document.getElementById('closeProductModal');
+  const cancelProductModalButton = document.getElementById('cancelProductModal');
   const updateButtons = document.querySelectorAll('.btn-update');
+  const productForm = document.getElementById('productForm');
+
+  if (addProductButton) {
+    addProductButton.addEventListener('click', showAddProductModal);
+  }
+
+  if (closeProductModalButton) {
+    closeProductModalButton.addEventListener('click', closeModal);
+  }
+
+  if (cancelProductModalButton) {
+    cancelProductModalButton.addEventListener('click', closeModal);
+  }
   
   updateButtons.forEach(button => {
     const productId = button.getAttribute('data-product-id');
@@ -20,6 +36,10 @@ document.addEventListener('DOMContentLoaded', function() {
       deleteProduct(parseInt(productId));
     });
   });
+
+  if (productForm) {
+    productForm.addEventListener('submit', handleProductFormSubmit);
+  }
 });
 
 function showAddProductModal() {
@@ -63,7 +83,7 @@ function deleteProduct(productId) {
   alert('Not Implemented Yet');
 }
 
-document.getElementById('productForm').addEventListener('submit', function(e) {
+function handleProductFormSubmit(e) {
   e.preventDefault();
   
   const productData = {
@@ -92,7 +112,7 @@ document.getElementById('productForm').addEventListener('submit', function(e) {
     .catch(error => {
       alert('Error saving product');
     });
-});
+}
 
 window.onclick = function(event) {
   const modal = document.getElementById('productModal');

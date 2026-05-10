@@ -23,7 +23,7 @@
   <main class="main-content">
     <div class="overview-header">
       <h1>Discover Amazing Products</h1>
-      <button class="btn btn-add" onclick="showAddProductModal()">➕ Add Product</button>
+      <button id="addProductBtn" class="btn btn-add">➕ Add Product</button>
     </div>
     <div class="products-grid">
       {%PRODUCT_CARDS%}
@@ -37,7 +37,7 @@
   <!-- Product Modal -->
   <div id="productModal" class="modal">
     <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
+      <span id="closeProductModal" class="close">&times;</span>
       <h2 id="modalTitle">Add New Product</h2>
       <form id="productForm">
         <input type="hidden" id="productId">
@@ -63,7 +63,7 @@
         </div>
         <div class="form-buttons">
           <button type="submit" class="btn btn-primary">Save Product</button>
-          <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+          <button type="button" id="cancelProductModal" class="btn btn-secondary">Cancel</button>
         </div>
       </form>
     </div>

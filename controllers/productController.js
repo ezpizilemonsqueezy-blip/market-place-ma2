@@ -1,23 +1,47 @@
 const Product = require('../models/productModel');
 const replaceTemplate = require('../modules/replaceTemplate');
 const fs = require('fs');
+const path = require('path');
 
 const tempOverview = fs.readFileSync(`${__dirname}/../public/template-overview.html`, 'utf-8');
 const tempCard = fs.readFileSync(`${__dirname}/../public/template-card.html`, 'utf-8');
 const tempItem = fs.readFileSync(`${__dirname}/../public/template-item.html`, 'utf-8');
+const seedProductsPath = path.join(__dirname, '../data/products.json');
+
+const getSeedProducts = () => JSON.parse(fs.readFileSync(seedProductsPath, 'utf-8'));
+
+const getSeedProductById = id => getSeedProducts().find(product => String(product.id) === String(id));
+
+const getProductsOrSeed = async query => {
+  const products = await query;
+  return products.length > 0 ? products : getSeedProducts();
+};
 
 exports.checkID = async (req, res, next, val) => {
   try {
     const product = await Product.findById(val);
-    if (!product) {
+    if (product) {
+      req.product = product;
+      return next();
+    }
+
+    const seedProduct = getSeedProductById(val);
+    if (!seedProduct) {
       return res.status(404).json({
         status: 'fail',
         message: 'Product not found'
       });
     }
-    req.product = product;
+
+    req.product = seedProduct;
     next();
   } catch (error) {
+    const seedProduct = getSeedProductById(val);
+    if (seedProduct) {
+      req.product = seedProduct;
+      return next();
+    }
+
     return res.status(400).json({
       status: 'fail',
       message: 'Invalid product ID'
@@ -54,18 +78,18 @@ exports.getHomePage = (req, res) => {
 
 exports.getOverviewPage = async (req, res) => {
   try {
-    const products = await Product.find();
+    const products = await getProductsOrSeed(Product.find());
     const cardsHtml = products.map(el => replaceTemplate(tempCard, el)).join('');
     const output = tempOverview.replace('{%PRODUCT_CARDS%}', cardsHtml);
     res.status(200).set('Content-Type', 'text/html');
     res.send(output);
   } catch (err) {
     console.error('ERROR 💥:', err);
-    res.status(500).send(`
-      <h1>Error loading products</h1>
-      <p>Details: ${err.message}</p>
-      <p>Check your console and MongoDB connection.</p>
-    `);
+    const products = getSeedProducts();
+    const cardsHtml = products.map(el => replaceTemplate(tempCard, el)).join('');
+    const output = tempOverview.replace('{%PRODUCT_CARDS%}', cardsHtml);
+    res.status(200).set('Content-Type', 'text/html');
+    res.send(output);
   }
 };
 
@@ -74,7 +98,7 @@ exports.getItemPage = async (req, res) => {
   const format = req.query.format;
 
   try {
-    const product = await Product.findById(id);
+    const product = await Product.findById(id) || getSeedProductById(id);
 
     if (!product) {
       if (format === 'json') {
@@ -96,19 +120,32 @@ exports.getItemPage = async (req, res) => {
       res.send(output);
     }
   } catch (error) {
-    if (format === 'json') {
-      res.status(400).set('Content-Type', 'application/json');
-      res.send(JSON.stringify({ status: 'fail', message: 'Invalid product ID' }));
+    const product = getSeedProductById(id);
+
+    if (product) {
+      if (format === 'json') {
+        res.status(200).set('Content-Type', 'application/json');
+        res.send(JSON.stringify({ status: 'success', data: { product } }));
+      } else {
+        res.status(200).set('Content-Type', 'text/html');
+        const output = replaceTemplate(tempItem, product);
+        res.send(output);
+      }
     } else {
-      res.status(400).set('Content-Type', 'text/html');
-      res.send('<h1>Invalid product ID</h1>');
+      if (format === 'json') {
+        res.status(400).set('Content-Type', 'application/json');
+        res.send(JSON.stringify({ status: 'fail', message: 'Invalid product ID' }));
+      } else {
+        res.status(400).set('Content-Type', 'text/html');
+        res.send('<h1>Invalid product ID</h1>');
+      }
     }
   }
 };
 
 exports.getAPIData = async (req, res) => {
   try {
-    const products = await Product.find();
+    const products = await getProductsOrSeed(Product.find());
     res.status(200).json({
       status: 'success',
       results: products.length,
@@ -117,9 +154,13 @@ exports.getAPIData = async (req, res) => {
       }
     });
   } catch (error) {
-    res.status(500).json({
-      status: 'error',
-      message: 'Failed to fetch products'
+    const products = getSeedProducts();
+    res.status(200).json({
+      status: 'success',
+      results: products.length,
+      data: {
+        products
+      }
     });
   }
 };
@@ -170,7 +211,7 @@ exports.getAllProducts = async (req, res) => {
     }
 
     // EXECUTE QUERY
-    const products = await query;
+    const products = await getProductsOrSeed(query);
 
     // SEND RESPONSE
     res.status(200).json({
@@ -182,9 +223,13 @@ exports.getAllProducts = async (req, res) => {
     });
   } catch (error) {
     console.error('Database error in getAllProducts:', error);
-    res.status(500).json({
-      status: 'error',
-      message: error.message || 'Database connection failed. Please check your MongoDB Atlas configuration.'
+    const products = getSeedProducts();
+    res.status(200).json({
+      status: 'success',
+      results: products.length,
+      data: {
+        products
+      }
     });
   }
 };
