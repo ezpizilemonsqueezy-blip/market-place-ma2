@@ -17,6 +17,14 @@ const getProductsOrSeed = async query => {
   return products.length > 0 ? products : getSeedProducts();
 };
 
+const getProductsWithSeed = async query => {
+  const products = await query;
+  const existingNames = new Set(products.map(product => product.name?.toLowerCase()));
+  const seedProducts = getSeedProducts().filter(product => !existingNames.has(product.name?.toLowerCase()));
+
+  return [...products, ...seedProducts];
+};
+
 exports.checkID = async (req, res, next, val) => {
   try {
     const product = await Product.findById(val);
@@ -78,7 +86,7 @@ exports.getHomePage = (req, res) => {
 
 exports.getOverviewPage = async (req, res) => {
   try {
-    const products = await getProductsOrSeed(Product.find());
+    const products = await getProductsWithSeed(Product.find());
     const cardsHtml = products.map(el => replaceTemplate(tempCard, el)).join('');
     const output = tempOverview.replace('{%PRODUCT_CARDS%}', cardsHtml);
     res.status(200).set('Content-Type', 'text/html');
@@ -145,7 +153,7 @@ exports.getItemPage = async (req, res) => {
 
 exports.getAPIData = async (req, res) => {
   try {
-    const products = await getProductsOrSeed(Product.find());
+    const products = await getProductsWithSeed(Product.find());
     res.status(200).json({
       status: 'success',
       results: products.length,
@@ -211,7 +219,10 @@ exports.getAllProducts = async (req, res) => {
     }
 
     // EXECUTE QUERY
-    const products = await getProductsOrSeed(query);
+    const hasQueryOptions = Object.keys(req.query).length > 0;
+    const products = hasQueryOptions
+      ? await getProductsOrSeed(query)
+      : await getProductsWithSeed(query);
 
     // SEND RESPONSE
     res.status(200).json({
